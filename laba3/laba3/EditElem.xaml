@@ -1,0 +1,48 @@
+﻿<Window x:Class="laba3.EditElem"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba3"
+        mc:Ignorable="d"
+        Title="Добавить элемент" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Введите Организацию:</TextBlock>
+        <TextBox Name="departmentBox" Grid.Row="1" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="2">Введите Имя:</TextBlock>
+        <TextBox Name="nameBox" Grid.Row="3" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="4">Введите Фамилию:</TextBlock>
+        <TextBox Name="surnameBox" Grid.Row="5" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="6">Введите Отчество:</TextBlock>
+        <TextBox Name="patronymicBox" Grid.Row="7" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="8">Введите год рожендия:</TextBlock>
+        <TextBox Name="yearBox" Grid.Row="9" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="10">Введите дистанцию:</TextBlock>
+        <TextBox Name="resultBox" Grid.Row="11" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <TextBlock Grid.Row="12">Введите занятое место:</TextBlock>
+        <TextBox Name="mestoBox" Grid.Row="13" Width="170" HorizontalAlignment="Left" ></TextBox>
+        <WrapPanel Grid.Row="15" HorizontalAlignment="Right" Margin="0,15,-0.2,14.6" Width="146">
+            <Button Name="btnAccept"  IsDefault="True" Click="BtnAccept_Click" MinWidth="60" Margin="0,0,10,0">ОК</Button>
+            <Button Name="btnCancel" IsCancel="True" MinWidth="60">Отмена</Button>
+        </WrapPanel>
+        <TextBlock Name="notice" HorizontalAlignment="Left" Margin="10,15,0,0" Grid.Row="15" TextWrapping="Wrap" Text="Заполните хотя бы одно поле" VerticalAlignment="Top" Width="116" Foreground="Red" Visibility="Hidden"/>
+    </Grid>
+</Window>

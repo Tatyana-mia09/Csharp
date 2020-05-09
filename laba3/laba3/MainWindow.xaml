@@ -1,0 +1,66 @@
+﻿<Window x:Class="laba3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba3"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+
+
+    <Grid Background="Black">
+        <DataGrid Name="DataGrid" Margin="10 20 0 0"  IsReadOnly ="True"
+                  AutoGenerateColumns="True"
+                  Height="360" Width="500" Background="AliceBlue"
+                  HorizontalAlignment="Left" CanUserSortColumns="False">
+        </DataGrid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Файл" Click="MenuItem_Click" >
+                <MenuItem Header="Новый" Click="NewFile_Click"></MenuItem>
+                <MenuItem Header="Открыть" Click="Open_Click" ></MenuItem>
+                <MenuItem Header="Сохранить" Click="Save_Click" ></MenuItem>
+                <Separator />
+                <MenuItem Header="Выход" Click="Exit_Click" ></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Об Авторе" Click="About_Click" ></MenuItem>
+        </Menu>
+        <Button Height="40" Width="170" HorizontalAlignment="Right" Margin="0 50 70 0"
+                VerticalAlignment="Top" Content="Удалить запись" Click = "Del_Click">
+        </Button>
+        <Button Height="40" Width="170" HorizontalAlignment="Right" Margin="0 100 70 0"
+                VerticalAlignment="Top" Content="Добавить запись" Click = "Add_Click" >
+        </Button>
+        <Button Height="40" Width="170" HorizontalAlignment="Right" Margin="0 150 70 0"
+                VerticalAlignment="Top"  Content="Сортировка по месту" Click = "Sort_Click" >
+        </Button>
+
+        <TextBlock Height="20" Width="170" HorizontalAlignment="Right" Margin="0,200,70,0"
+                 VerticalAlignment="Top" Text="Введите организацию" Foreground ="Red"
+        >
+        </TextBlock>
+        
+        <TextBox Name="Search" Height="30" Width="170" HorizontalAlignment="Right" Margin="0,220,70,0"
+                VerticalAlignment="Top" TextChanged="Search_Click"
+                 >
+        </TextBox>
+        <Button Height="40" Width="170" HorizontalAlignment="Right" Margin="0 260 70 0"
+                VerticalAlignment="Top"  Content="Изменить запись" Click = "Edit_Click" >
+        </Button>
+        <TextBlock  
+                   FontStyle="Oblique" Text="Окно ошибок" Foreground ="Red" Height="20" Width="100" 
+            Background="Black"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 155 35" ></TextBlock>
+        <TextBox Name="InfoBlock" HorizontalAlignment="Right" IsReadOnly="True"
+                    VerticalAlignment="Bottom"
+                   FontStyle="Oblique"
+                   Foreground ="Black"
+                    Height="30" Width="250" Background="WhiteSmoke"
+                  Margin="5" >            
+        </TextBox>
+    </Grid>
+
+</Window>
